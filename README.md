@@ -5,8 +5,8 @@ Run npm install && npm start
 
 Open 127.0.0.1:3011
 
-When you have many divs - highlight breaks
+When you have many divs - highlighting breaks
 ![alt text](breaks.png)
 
-If you have not so many divs - highlight works
+If you have not so many divs - highlighting works
 ![alt text](works.png)
