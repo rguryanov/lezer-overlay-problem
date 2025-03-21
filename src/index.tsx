@@ -61,7 +61,7 @@ return hello;
     <div>{{hello}} {{world}}</div>
     <div>
       HTML highlighting broken here
-      If you delete most divs highlighting will work again 
+      If you delete most divs underneath - highlighting will work again 
     </div>
   ${longDivs}
   </body> 
