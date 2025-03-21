@@ -1,0 +1,24 @@
+{
+    "compileOnSave": false,
+    "exclude": [ "node_modules", "scripts", "dist" ],
+    "compilerOptions": {
+        "baseUrl": "src",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "jsx": "react-jsx",
+        "target": "ES6",
+        // "baseUrl": ".",
+        "paths": { 
+            "*": [ "node_modules/*" ]
+        },
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": false,
+        "skipLibCheck": true,
+        "lib": [
+            "dom",
+            "esnext"
+        ]
+    }
+}

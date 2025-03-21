@@ -1,0 +1,38 @@
+
+@precedence {
+  top,
+  mid,
+  lesser
+}
+
+@top Template { (InsertBlock | PlainText)* }
+
+InsertBlock { InsertBlockStart ExpressionContent }
+
+InsertBlockStart { "{{" }
+
+@local tokens {
+  
+  InsertBlockEnd { "}}" }
+  InsertBlockEof { @eof }
+  @else InsertBlockContent
+
+}
+
+@skip {} { 
+  ExpressionContent { 
+
+    InsertBlockContent?  
+    (InsertBlockEnd | InsertBlockEof)
+
+  }
+}
+
+@tokens {
+  PlainText { ![{] PlainText? | "{" (@eof | ![{] PlainText?) }
+
+  @precedence { PlainText }
+
+}
+
+@detectDelim
